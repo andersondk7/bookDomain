@@ -12,9 +12,10 @@ final case class Location(
   locationName: LocationName,
   locationAbbreviation: LocationAbbreviation,
   countryID: CountryID,
-  createDate: CreateDate = CreateDate.now,
+  override val createDate: CreateDate = CreateDate.now,
   override val lastUpdate: Option[UpdateDate] = None)
-  extends Updatable[Location] {
+  extends Updatable[Location]
+    with Createable[Location] {
 
   override def update: Location = this.copy(version = version.next, lastUpdate = UpdateDate.now)
 

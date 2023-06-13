@@ -13,9 +13,10 @@ final case class Book(
   price: Price,
   publisherID: Option[PublisherID],
   publishDate: Option[PublishDate],
-  createDate: CreateDate = CreateDate.now,
+  override val createDate: CreateDate = CreateDate.now,
   override val lastUpdate: Option[UpdateDate] = None)
-  extends Updatable[Book] {
+  extends Updatable[Book]
+    with Createable[Book] {
 
   override def update: Book = this.copy(version = version.next, lastUpdate = UpdateDate.now)
 

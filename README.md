@@ -4,14 +4,14 @@
 This project is a proof of concept work investigating different relational database technologies.
 
 It is based on a very simplified book model.
-
+![Domain Model](docs/BookBiz-UML.png)
 
 The project:
 - exposes a domain  consisting of data types, actions and possible exceptions.  
 - setup of relational database that models the domain also provides an implementation of this api using slick.   Eventually the api could be refactored into a separate library and a slick implementation.  This would allow for different implementations in the future.
 
 ## Goals
- - investigate how slick works
+ - investigate how different jdbc librairies work
  - investigate possible code organization patterns
  - investigate test approaches
  - learn more about integration with Postgres
@@ -22,6 +22,7 @@ This project uses a database hosted on a postgres server.
 Instructions on how to set up a local docker instance of postgres are found [here](localPostgres.md)
 
 The database is called book_biz and represents a fictitious publishing company.  
+![ERD](docs/erd.png)
 
 ### Environment
 The following environment variables are required:
@@ -34,18 +35,6 @@ this schema is typically:
 - *dev* for the shared development environment
 - *qa* for separate qa testing
 - *prod* for production deployments
-
-## Usage
-The consumer of the library must:
-1. configure the library with an application.conf.  
-   2. see [example](slick/src/test/resources/application.conf)
-3. on startup create an instance of DaoFactory by calling DaoFactoryBuilder.configure.  If the result is a Left[ConfigurationException] then there you can't continue.  If it is a Right[DaoFactory] then use this to access the different dao classes to interact with the database
-4. on shutdown call DaoFactoryBuilder.shutdown with the DaoFactory.database to clean up 
-
-## Release Steps
-This project is based on the git-flow pattern described by [Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
-
-Specific steps are detailed [here](release.md)
 
 ## Code structure
 The code structure is detailed [here](structure.md)

@@ -13,9 +13,10 @@ final case class Author(
   lastName: LastName,
   firstName: Option[FirstName],
   locationId: Option[LocationID],
-  createDate: CreateDate = CreateDate.now,
+  override val createDate: CreateDate = CreateDate.now,
   override val lastUpdate: Option[UpdateDate] = None)
-  extends Updatable[Author] {
+  extends Updatable[Author]
+    with Createable[Author] {
 
   override def update: Author = this.copy(version = version.next, lastUpdate = UpdateDate.now)
 

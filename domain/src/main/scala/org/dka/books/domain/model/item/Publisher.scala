@@ -12,9 +12,10 @@ final case class Publisher(
   publisherName: PublisherName,
   locationId: Option[LocationID],
   webSite: Option[WebSite],
-  createDate: CreateDate = CreateDate.now,
+  override val createDate: CreateDate = CreateDate.now,
   override val lastUpdate: Option[UpdateDate] = None)
-  extends Updatable[Publisher] {
+  extends Updatable[Publisher]
+    with Createable[Publisher] {
 
   override def update: Publisher = this.copy(version = version.next, lastUpdate = UpdateDate.now)
 
