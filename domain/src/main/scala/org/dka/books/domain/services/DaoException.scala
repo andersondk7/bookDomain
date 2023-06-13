@@ -1,6 +1,6 @@
-package org.dka.rdbms.common.dao
+package org.dka.books.domain.services
 
-import org.dka.rdbms.common.model.fields.{ID, Version}
+import org.dka.books.domain.model.fields.{ID, Version}
 
 sealed trait DaoException extends Throwable {
 

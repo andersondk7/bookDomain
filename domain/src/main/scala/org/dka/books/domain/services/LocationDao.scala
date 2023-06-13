@@ -1,6 +1,6 @@
-package org.dka.rdbms.common.dao
+package org.dka.books.domain.services
 
-import org.dka.rdbms.common.model.item.Location
+import org.dka.books.domain.model.item.Location
 
 /**
  * adds methods beyond simple crud stuff anticipated to be mostly specific queries

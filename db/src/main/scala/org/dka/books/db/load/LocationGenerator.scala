@@ -1,7 +1,7 @@
-package org.dka.rdbms.db.load
+package org.dka.books.db.load
 
-import org.dka.rdbms.common.model.fields.{CountryID, ID, LocationAbbreviation, LocationName, Version}
-import org.dka.rdbms.common.model.item.Location
+import org.dka.books.domain.model.fields.{CountryID, ID, LocationAbbreviation, LocationName, Version}
+import org.dka.books.domain.model.item.Location
 import Generator._
 
 import java.util.UUID

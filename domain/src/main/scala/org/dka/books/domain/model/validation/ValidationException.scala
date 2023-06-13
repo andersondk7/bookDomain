@@ -1,4 +1,4 @@
-package org.dka.rdbms.common.model.validation
+package org.dka.books.domain.model.validation
 
 import cats.data.NonEmptyChain
 import io.circe.DecodingFailure

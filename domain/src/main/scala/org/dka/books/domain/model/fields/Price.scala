@@ -1,10 +1,10 @@
-package org.dka.rdbms.common.model.fields
+package org.dka.books.domain.model.fields
 
 import cats.data.Validated._
 import cats.implicits.catsSyntaxValidatedIdBinCompat0
 import io.circe.{DecodingFailure, HCursor}
-import org.dka.rdbms.common.model.validation.Validation.ValidationErrorsOr
-import org.dka.rdbms.common.model.validation.{BigDecimalValidation, JsonParseException, NumberTooSmallException, PositiveIntegerValidation}
+import org.dka.books.domain.model.validation.Validation.ValidationErrorsOr
+import org.dka.books.domain.model.validation.{BigDecimalValidation, JsonParseException, NumberTooSmallException, PositiveIntegerValidation}
 
 /**
  * titleName requirements:

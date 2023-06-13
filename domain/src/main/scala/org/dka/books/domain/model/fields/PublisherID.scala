@@ -1,6 +1,6 @@
-package org.dka.rdbms.common.model.fields
+package org.dka.books.domain.model.fields
 
-import org.dka.rdbms.common.model.validation.UUIDValidation
+import org.dka.books.domain.model.validation.UUIDValidation
 
 import java.util.UUID
 

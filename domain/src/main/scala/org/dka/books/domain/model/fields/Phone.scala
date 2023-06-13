@@ -1,6 +1,6 @@
-package org.dka.rdbms.common.model.fields
+package org.dka.books.domain.model.fields
 
-import org.dka.rdbms.common.model.validation.StringLengthValidation
+import org.dka.books.domain.model.validation.StringLengthValidation
 
 /**
  * phone requirements:

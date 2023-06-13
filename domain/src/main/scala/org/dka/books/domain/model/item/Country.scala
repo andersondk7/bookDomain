@@ -1,10 +1,10 @@
-package org.dka.rdbms.common.model.item
+package org.dka.books.domain.model.item
 
 import cats.data.Validated._
 import cats.implicits._
 import io.circe._
-import org.dka.rdbms.common.model.validation.Validation._
-import org.dka.rdbms.common.model.fields.{CountryAbbreviation, CountryName, CreateDate, ID, UpdateDate, Version}
+import org.dka.books.domain.model.validation.Validation._
+import org.dka.books.domain.model.fields.{CountryAbbreviation, CountryName, CreateDate, ID, UpdateDate, Version}
 
 final case class Country(
   override val id: ID,

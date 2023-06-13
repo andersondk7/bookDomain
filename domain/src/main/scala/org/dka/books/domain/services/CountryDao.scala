@@ -1,6 +1,6 @@
-package org.dka.rdbms.common.dao
+package org.dka.books.domain.services
 
-import org.dka.rdbms.common.model.item.Country
+import org.dka.books.domain.model.item.Country
 
 /**
  * adds methods beyond simple crud stuff anticipated to be mostly specific queries

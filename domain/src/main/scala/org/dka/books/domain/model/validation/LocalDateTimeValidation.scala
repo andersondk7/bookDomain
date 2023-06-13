@@ -1,9 +1,9 @@
-package org.dka.rdbms.common.model.validation
+package org.dka.books.domain.model.validation
 
 import cats.data.Validated._
 import cats.implicits.catsSyntaxValidatedIdBinCompat0
 import io.circe._
-import org.dka.rdbms.common.model.fields.Field
+import org.dka.books.domain.model.fields.Field
 
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter

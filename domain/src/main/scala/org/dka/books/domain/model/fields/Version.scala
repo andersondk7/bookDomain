@@ -1,9 +1,9 @@
-package org.dka.rdbms.common.model.fields
+package org.dka.books.domain.model.fields
 
 import cats.implicits.catsSyntaxValidatedIdBinCompat0
 import io.circe.{DecodingFailure, HCursor}
-import org.dka.rdbms.common.model.validation.Validation.ValidationErrorsOr
-import org.dka.rdbms.common.model.validation.{JsonParseException, PositiveIntegerValidation}
+import org.dka.books.domain.model.validation.Validation.ValidationErrorsOr
+import org.dka.books.domain.model.validation.{JsonParseException, PositiveIntegerValidation}
 
 /**
  * version requirements:

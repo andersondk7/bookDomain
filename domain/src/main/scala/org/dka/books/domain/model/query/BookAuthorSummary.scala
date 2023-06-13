@@ -1,8 +1,8 @@
-package org.dka.rdbms.common.model.query
+package org.dka.books.domain.model.query
 
 import io.circe._
-import org.dka.rdbms.common.model.fields.{FirstName, LastName, Title}
-import org.dka.rdbms.common.model.item.{Author, AuthorBookRelationship, Book}
+import org.dka.books.domain.model.fields.{FirstName, LastName, Title}
+import org.dka.books.domain.model.item.{Author, AuthorBookRelationship, Book}
 
 final case class BookAuthorSummary(
   titleName: Title,

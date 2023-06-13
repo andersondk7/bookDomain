@@ -1,7 +1,7 @@
-package org.dka.rdbms.db.load
+package org.dka.books.db.load
 
-import org.dka.rdbms.common.model.fields.{ID, LocationID, PublisherName, Version, WebSite}
-import org.dka.rdbms.common.model.item.Publisher
+import org.dka.books.domain.model.fields.{ID, LocationID, PublisherName, Version, WebSite}
+import org.dka.books.domain.model.item.Publisher
 import Generator._
 
 import java.util.UUID

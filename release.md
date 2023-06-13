@@ -1,7 +1,7 @@
 # How to do a release
 
 Development flow:
-1. checkout from develop to do a feature/story
+1. checkout from main to do a feature/story
    2. update version to snapshot
 2. merge back into develop when tested
     3. update version to non-snapshot

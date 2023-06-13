@@ -1,14 +1,14 @@
-package org.dka.rdbms.common.model.item
+package org.dka.books.domain.model.item
 
 import com.typesafe.scalalogging.Logger
 import io.circe.parser.decode
 import io.circe.syntax._
-import org.dka.rdbms.common.model.fields._
 import org.scalatest.funspec.AnyFunSpec
 import org.scalatest.matchers.should.Matchers
-
 import java.time.LocalDate
 import java.util.UUID
+
+import org.dka.books.domain.model.fields._
 
 class BookSpec extends AnyFunSpec with Matchers {
 

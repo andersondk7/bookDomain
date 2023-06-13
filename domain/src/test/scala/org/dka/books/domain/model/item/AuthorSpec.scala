@@ -1,12 +1,13 @@
-package org.dka.rdbms.common.model.item
+package org.dka.books.domain.model.item
 
 import io.circe.parser.decode
 import io.circe.syntax._
-import org.dka.rdbms.common.model.fields._
-import org.dka.rdbms.common.model.item
-import org.dka.rdbms.common.model.item.Author._
 import org.scalatest.funspec.AnyFunSpec
 import org.scalatest.matchers.should.Matchers
+
+import org.dka.books.domain.model.fields._
+import org.dka.books.domain.model.item
+import org.dka.books.domain.model.item.Author._
 
 class AuthorSpec extends AnyFunSpec with Matchers {
 
@@ -24,12 +25,12 @@ class AuthorSpec extends AnyFunSpec with Matchers {
       val json = author.asJson.noSpaces
       println(s"author:\n${author.asJson.spaces2}")
       decode[Author](json) match {
-        case Left(error) => fail(error)
+        case Left(error)    => fail(error)
         case Right(decoded) => decoded shouldBe author
       }
     }
     it("with all fields, read different order than write") {
-      val id = ID.build
+      val id         = ID.build
       val createDate = CreateDate.now
       val author = Author(
         id,

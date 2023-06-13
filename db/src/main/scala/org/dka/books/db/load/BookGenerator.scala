@@ -1,7 +1,7 @@
-package org.dka.rdbms.db.load
+package org.dka.books.db.load
 
-import org.dka.rdbms.common.model.fields.{ID, Price, PublishDate, PublisherID, Title, UpdateDate, Version}
-import org.dka.rdbms.common.model.item.Book
+import org.dka.books.domain.model.fields.{ID, Price, PublishDate, PublisherID, Title, UpdateDate, Version}
+import org.dka.books.domain.model.item.Book
 import Generator._
 
 import java.util.UUID

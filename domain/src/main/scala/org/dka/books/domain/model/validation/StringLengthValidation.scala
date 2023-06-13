@@ -1,11 +1,11 @@
-package org.dka.rdbms.common.model.validation
+package org.dka.books.domain.model.validation
 
 import cats.data.Validated._
 import cats.implicits.catsSyntaxValidatedIdBinCompat0
 import io.circe._
 import Validation.ValidationErrorsOr
-import org.dka.rdbms.common.model._
-import org.dka.rdbms.common.model.fields.Field
+import org.dka.books.domain.model._
+import org.dka.books.domain.model.fields.Field
 
 trait StringLengthValidation[T <: Field[String]] extends Validation[String, String, T] {
 

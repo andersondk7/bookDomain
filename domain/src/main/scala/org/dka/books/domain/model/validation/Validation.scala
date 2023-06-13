@@ -1,10 +1,10 @@
-package org.dka.rdbms.common.model.validation
+package org.dka.books.domain.model.validation
 
 import cats.data.Validated._
 import cats.data.{NonEmptyChain, ValidatedNec}
 import io.circe._
-import org.dka.rdbms.common.model.fields.Field
-import org.dka.rdbms.common.model.validation.Validation._
+import org.dka.books.domain.model.fields.Field
+import org.dka.books.domain.model.validation.Validation._
 
 import scala.language.implicitConversions
 

@@ -1,9 +1,9 @@
-package org.dka.rdbms.common.dao
+package org.dka.books.domain.services
 
-import org.dka.rdbms.common.dao.DaoException.DaoErrorsOr
-import org.dka.rdbms.common.model.fields.ID
-import org.dka.rdbms.common.model.item.Book
-import org.dka.rdbms.common.model.query.BookAuthorSummary
+import org.dka.books.domain.services.DaoException.DaoErrorsOr
+import org.dka.books.domain.model.fields.ID
+import org.dka.books.domain.model.item.Book
+import org.dka.books.domain.model.query.BookAuthorSummary
 
 import scala.concurrent.{ExecutionContext, Future}
 

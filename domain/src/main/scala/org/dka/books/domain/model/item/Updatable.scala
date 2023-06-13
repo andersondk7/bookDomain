@@ -1,6 +1,6 @@
-package org.dka.rdbms.common.model.item
+package org.dka.books.domain.model.item
 
-import org.dka.rdbms.common.model.fields.{ID, UpdateDate, Version}
+import org.dka.books.domain.model.fields.{ID, UpdateDate, Version}
 
 /**
  * Represents a CRUD Item that can be updated

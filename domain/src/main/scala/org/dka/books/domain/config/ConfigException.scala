@@ -1,4 +1,4 @@
-package org.dka.rdbms.common.config
+package org.dka.books.domain.config
 
 import cats.data.NonEmptyChain
 

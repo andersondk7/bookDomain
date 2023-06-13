@@ -1,4 +1,4 @@
-package org.dka.rdbms.common.model.fields
+package org.dka.books.domain.model.fields
 
 /**
  * Container for a value of type T

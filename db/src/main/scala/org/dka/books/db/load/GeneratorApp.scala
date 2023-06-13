@@ -1,4 +1,4 @@
-package org.dka.rdbms.db.load
+package org.dka.books.db.load
 
 import cats.Show
 

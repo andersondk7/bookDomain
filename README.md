@@ -1,11 +1,14 @@
-# learning Slick (the functional orm)
+# Book Domain
 
 ## Purpose
-This project is a proof of concept work to encapsulate database access using slick.
+This project is a proof of concept work investigating different relational database technologies.
 
-The output of this project is a library that can be consumed by various other projects with minimal exposure of the underlying database technology.
+It is based on a very simplified book model.
 
-The library exposes an api consisting of data types, actions and possible exceptions.  It also provides an implementation of this api using slick.   Eventually the api could be refactored into a separate library and a slick implementation.  This would allow for different implementations in the future.
+
+The project:
+- exposes a domain  consisting of data types, actions and possible exceptions.  
+- setup of relational database that models the domain also provides an implementation of this api using slick.   Eventually the api could be refactored into a separate library and a slick implementation.  This would allow for different implementations in the future.
 
 ## Goals
  - investigate how slick works

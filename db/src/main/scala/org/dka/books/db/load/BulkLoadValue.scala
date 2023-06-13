@@ -1,6 +1,6 @@
-package org.dka.rdbms.db.load
+package org.dka.books.db.load
 
-import org.dka.rdbms.common.model.item.Country
+import org.dka.books.domain.model.item.Country
 
 trait BulkLoad[I] {
 
