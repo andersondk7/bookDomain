@@ -28,7 +28,7 @@ inThisBuild(
   )
 )
 
-lazy val bookDomain = (projectMatrix in file("common"))
+lazy val bookDomain = (projectMatrix in file("domain"))
   .configs(IntegrationTest)
   .settings(
     libraryDependencies ++= commonDependencies,
