@@ -14,6 +14,6 @@ object CountryID extends UUIDValidation[CountryID] {
 
   def build: CountryID = new CountryID(UUID.randomUUID())
 
-  def build(uuid: String) = new CountryID(UUID.fromString(uuid))
+  def build(s: String) = new CountryID(UUID.fromString(s))
 
 }
