@@ -6,7 +6,7 @@ lazy val scala3 = "3.3.0"
 lazy val supportedScalaVersions = List(scala2, scala3)
 
 ThisBuild / organization := "org.dka.books"
-ThisBuild / version := "0.7.1"
+ThisBuild / version := "0.7.2"
 ThisBuild / scalaVersion := scala3
 
 lazy val flywaySettings: Seq[Def.Setting[_]] = Seq(
