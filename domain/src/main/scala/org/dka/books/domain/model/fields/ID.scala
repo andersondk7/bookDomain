@@ -15,6 +15,6 @@ object ID extends UUIDValidation[ID] {
 
   def build: ID = new ID(UUID.randomUUID())
 
-  def build(uuid: String) = new ID(UUID.fromString(uuid))
+  def build(s: String) = new ID(UUID.fromString(s))
 
 }
