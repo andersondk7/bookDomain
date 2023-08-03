@@ -7,7 +7,7 @@ import org.dka.books.domain.model.validation.StringLengthValidation
  *   - can't be empty
  *   - can not be more than 20
  */
-final case class FirstName private (override val value: String) extends Field[String]
+sealed abstract case class FirstName private (override val value: String) extends Field[String]
 
 object FirstName extends StringLengthValidation[FirstName] {
 
@@ -17,7 +17,7 @@ object FirstName extends StringLengthValidation[FirstName] {
 
   override val fieldName: String = "first_name"
 
-  override def build(fn: String): FirstName = new FirstName(fn)
+  override def build(fn: String): FirstName = new FirstName(fn) {}
 
   def fromOpt(o: Option[String]): Option[FirstName] = o.map(build)
 

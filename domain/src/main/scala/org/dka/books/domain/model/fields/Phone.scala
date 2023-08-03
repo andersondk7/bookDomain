@@ -6,7 +6,7 @@ import org.dka.books.domain.model.validation.StringLengthValidation
  * phone requirements:
  *   - must be 12 characters
  */
-final case class Phone private (override val value: String) extends Field[String]
+sealed abstract case class Phone private (override val value: String) extends Field[String]
 
 object Phone extends StringLengthValidation[Phone] {
 
@@ -16,6 +16,6 @@ object Phone extends StringLengthValidation[Phone] {
 
   override val fieldName: String = "phone"
 
-  override def build(s: String): Phone = new Phone(s)
+  override def build(s: String): Phone = new Phone(s) {}
 
 }

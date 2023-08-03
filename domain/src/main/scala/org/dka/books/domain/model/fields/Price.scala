@@ -11,13 +11,13 @@ import org.dka.books.domain.model.validation.{BigDecimalValidation, JsonParseExc
  *   - can't be empty
  *   - can not be more than 30
  */
-final case class Price private (override val value: BigDecimal) extends Field[BigDecimal]
+sealed abstract case class Price private (override val value: BigDecimal) extends Field[BigDecimal]
 
 object Price extends BigDecimalValidation[Price] {
 
   override val fieldName: String = "price"
 
-  override def build(amount: BigDecimal): Price = new Price(amount)
+  override def build(amount: BigDecimal): Price = new Price(amount) {}
 
   /**
    * also checks that the value is greater than 0.00

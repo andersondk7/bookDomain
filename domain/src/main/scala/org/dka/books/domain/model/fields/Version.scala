@@ -10,9 +10,9 @@ import org.dka.books.domain.model.validation.{JsonParseException, PositiveIntege
  *   - can't be empty
  *   - must be positive
  */
-final case class Version private (override val value: Int) extends Field[Int] {
+sealed abstract case class Version private (override val value: Int) extends Field[Int] {
 
-  def next: Version = this.copy(value = this.value + 1)
+  def next: Version = Version.build(this.value + 1)
 
 }
 
@@ -20,8 +20,8 @@ object Version extends PositiveIntegerValidation[Version] {
 
   override val fieldName: String = "version"
 
-  val defaultVersion: Version = new Version(1)
+  val defaultVersion: Version = build(1)
 
-  override def build(value: Int): Version = new Version(value)
+  override def build(value: Int): Version = new Version(value) {}
 
 }

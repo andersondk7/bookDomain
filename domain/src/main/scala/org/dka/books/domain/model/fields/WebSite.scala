@@ -6,7 +6,7 @@ import org.dka.books.domain.model.validation.StringLengthValidation
  * website requirements:
  *   - can not be more than 60
  */
-final case class WebSite private (override val value: String) extends Field[String]
+sealed abstract case class WebSite private (override val value: String) extends Field[String]
 
 object WebSite extends StringLengthValidation[WebSite] {
 
@@ -16,7 +16,7 @@ object WebSite extends StringLengthValidation[WebSite] {
 
   override val fieldName: String = "website"
 
-  override def build(c: String): WebSite = new WebSite(c)
+  override def build(c: String): WebSite = new WebSite(c) {}
 
   def fromOpt(o: Option[String]): Option[WebSite] = o.map(build)
 

@@ -7,7 +7,7 @@ import org.dka.books.domain.model.validation.StringLengthValidation
  *   - can't be empty
  *   - can not be more than 30
  */
-final case class Title private (override val value: String) extends Field[String]
+sealed abstract case class Title private (override val value: String) extends Field[String]
 
 object Title extends StringLengthValidation[Title] {
 
@@ -17,6 +17,6 @@ object Title extends StringLengthValidation[Title] {
 
   override val fieldName: String = "title"
 
-  override def build(tn: String): Title = new Title(tn)
+  override def build(tn: String): Title = new Title(tn) {}
 
 }

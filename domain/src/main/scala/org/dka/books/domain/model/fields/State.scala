@@ -7,7 +7,7 @@ import org.dka.books.domain.model.validation.StringLengthValidation
  *   - must be 2 characters
  */
 
-final case class State private (override val value: String) extends Field[String]
+sealed abstract case class State private (override val value: String) extends Field[String]
 
 object State extends StringLengthValidation[State] {
 
@@ -17,6 +17,6 @@ object State extends StringLengthValidation[State] {
 
   val fieldName: String = "state"
 
-  def build(s: String): State = new State(s)
+  def build(s: String): State = new State(s) {}
 
 }

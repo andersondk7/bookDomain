@@ -8,7 +8,7 @@ import org.dka.books.domain.model.validation.StringLengthValidation
  *   - can not be more than 40
  */
 
-final case class PublisherName private (override val value: String) extends Field[String]
+sealed abstract case class PublisherName private (override val value: String) extends Field[String]
 
 object PublisherName extends StringLengthValidation[PublisherName] {
 
@@ -18,6 +18,6 @@ object PublisherName extends StringLengthValidation[PublisherName] {
 
   override val fieldName: String = "publisher_name"
 
-  override def build(cn: String): PublisherName = new PublisherName(cn)
+  override def build(pn: String): PublisherName = new PublisherName(pn) {}
 
 }

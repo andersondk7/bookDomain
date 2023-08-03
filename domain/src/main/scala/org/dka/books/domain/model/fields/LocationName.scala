@@ -6,7 +6,7 @@ import org.dka.books.domain.model.validation.StringLengthValidation
  * country requirements:
  *   - can not be more than 40
  */
-final case class LocationName private (override val value: String) extends Field[String]
+sealed abstract case class LocationName private (override val value: String) extends Field[String]
 
 object LocationName extends StringLengthValidation[LocationName] {
 
@@ -16,6 +16,6 @@ object LocationName extends StringLengthValidation[LocationName] {
 
   override val fieldName: String = "location_name"
 
-  override def build(l: String): LocationName = new LocationName(l)
+  override def build(l: String): LocationName = new LocationName(l) {}
 
 }

@@ -11,7 +11,7 @@ import java.time.temporal.ChronoUnit
  *   - must be in format 'YYYY-MM_DD hh:mm:ss.ssssss'
  *   - will only have resolution to milliseconds
  */
-final case class UpdateDate private (override val value: LocalDateTime) extends Field[LocalDateTime] {
+sealed abstract case class UpdateDate private (override val value: LocalDateTime) extends Field[LocalDateTime] {
 
   val asTimeStamp: Timestamp = Timestamp.valueOf(value)
 
@@ -21,11 +21,11 @@ object UpdateDate extends LocalDateTimeValidation[UpdateDate] {
 
   override val fieldName: String = "update_date"
 
-  override def build(tn: LocalDateTime): UpdateDate = new UpdateDate(tn.truncatedTo(ChronoUnit.MILLIS))
+  override def build(tn: LocalDateTime): UpdateDate = new UpdateDate(tn.truncatedTo(ChronoUnit.MILLIS)) {}
 
-  def build(ts: Timestamp): UpdateDate = new UpdateDate(ts.toLocalDateTime)
+  def build(ts: Timestamp): UpdateDate = new UpdateDate(ts.toLocalDateTime) {}
 
-  def fromOption(o: Option[LocalDateTime]): Option[UpdateDate] = o.map(ld => new UpdateDate(ld))
+  def fromOption(o: Option[LocalDateTime]): Option[UpdateDate] = o.map(ld => build(ld))
 
   def now: Option[UpdateDate] = Some(UpdateDate.build(LocalDateTime.now))
 
